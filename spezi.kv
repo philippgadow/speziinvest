@@ -1,0 +1,68 @@
+MainInterface:
+<MainInterface>:
+	orientation: "vertical"
+	name_output: name
+	credit_output: credit
+
+	BoxLayout:
+		height: "60dp"
+		size_hint_y: None
+		Label:
+			text: "Name:"
+			size_hint_x: 10
+		TextInput:
+			size_hint_x: 60
+			text: ""
+			font_size: 14
+			id: name
+		Label:
+			text: "Guthaben"
+			size_hint_x: 10
+		TextInput:
+			size_hint_x: 20
+			id: credit
+			text: ""
+			font_size: 14
+
+
+	BoxLayout:
+		Button:
+			text: ""
+			on_press: root.book_spezi()
+			size_hint_x: 250
+			background_normal: 'img/spezi.png'
+
+		Label:
+			size_hint_x: 10
+		Button:
+			text: ""
+			on_press: root.book_schorle()
+			size_hint_x: 250
+			background_normal: 'img/schorle.png'
+		Label:
+			size_hint_x: 10
+		Button:
+			text: ""
+			on_press: root.book_bier()
+			size_hint_x: 250
+			background_normal: 'img/bier.png'
+
+
+	BoxLayout:
+		height: "10dp"
+		size_hint_y: None
+		Label:
+			size_hint_x: 600
+
+	BoxLayout:
+		Button:
+			text: ""
+			on_press: root.book_mate()
+			size_hint_x: 250
+			background_normal: 'img/mate.png'
+		Label:
+			size_hint_x: 10
+		Button:
+			text: "Read User ID"
+			size_hint_x: 510
+			on_press: root.read_out()
